@@ -16,7 +16,7 @@ def test_readme_contents():
     assert len(readme_words) >= 500, "Make your README.md file interesting! Add atleast 500 words"
 
 def test_odd_it_even():
-    from assignment_code import odd_it  # Import the relevant functions
+    from session8 import odd_it  # Import the relevant functions
 
     @odd_it
     def adder(a: int, b: int) -> int:
@@ -39,7 +39,7 @@ class Capturing(list):
         sys.stdout = self._stdout
 
 def test_logger():
-    from assignment_code import logger
+    from session8 import logger
 
     @logger 
     def function_name(var1: str, var2: int) -> str:
@@ -56,7 +56,7 @@ def test_logger():
     assert "function_name" == function_name.__name__
 
 def test_access_rights_function():
-    from assignment_code import decorator_factory
+    from session8 import decorator_factory
 
     def func(*args):
         return args
@@ -67,7 +67,7 @@ def test_access_rights_function():
     assert len(decorator_factory('no')(func)(1, 2, 3, 4)) == 1
 
 def test_authenticate_function():
-    from assignment_code import authenticate
+    from session8 import authenticate
 
     @authenticate("secret")
     def my_func():
@@ -80,7 +80,7 @@ def test_authenticate_function():
     assert my_func("secret") == "Amazing!"
 
 def test_timed_function():
-    from assignment_code import timed
+    from session8 import timed
 
     @timed(10)
     def func(*args):
